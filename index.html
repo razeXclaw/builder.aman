@@ -132,8 +132,39 @@
         </div>
     </div>
 
+    <footer class="mt-24 relative z-10">
+        <div class="container mx-auto px-4">
+            <div class="bg-gradient-to-r from-purple-900/50 to-pink-900/50 backdrop-blur-md p-8 rounded-xl border border-purple-500/20">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="flex items-center gap-3">
+                        <div class="ak-logo w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
+                            <span class="text-xl font-bold text-white">AK</span>
+                        </div>
+                        <div>
+                            <div class="text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">Aman Kunwar</div>
+                            <div class="text-sm text-gray-300">Full Stack Developer & Designer</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-4 text-gray-300">
+                        <a href="#" class="hover:text-white transition-colors">Home</a>
+                        <a href="#" class="hover:text-white transition-colors">Work</a>
+                        <a href="#" class="hover:text-white transition-colors">Contact</a>
+                        <a href="#" class="hover:text-white transition-colors">About</a>
+                    </div>
+                </div>
+                <div class="mt-6 pt-6 border-t border-white/10 text-sm text-gray-400 text-center md:text-left">
+                    © <span id="year"></span> Aman Kunwar. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            var yearEl = document.getElementById('year');
+            if (yearEl) {
+                yearEl.textContent = new Date().getFullYear();
+            }
             particlesJS('particles-js', {
                 "particles": {
                     "number": {
